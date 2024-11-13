@@ -1,0 +1,41 @@
+.F.F.F
+======================================================================
+FAIL: test_list_int (__main__.Test02_AddContact)
+*** Test02 *** GIVEN: filename t99.dat = {'7145551111': ['Steve', 'Jobs'], '5625553333': ['Bill', 'Gates']} AND contacts = Contacts(filename='t99.dat') *** FUNCTION CALL: r = contacts.add_contact(id = '7145551212', first_name = 'Richard', last_name = 'Stallman') *** EXPECT: filename t99.dat = {'7145551111': ['Steve', 'Jobs'], '5625553333': ['Bill', 'Gates'], '7145551212': ['Richard', 'Stallman']} ***
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/bebopkenny/cpsc233p/hw7/test.py", line 38, in test_list_int
+    self.assertEqual(r, 'error')
+AssertionError: 'Phone number already exists.' != 'error'
+- Phone number already exists.
++ error
+
+
+======================================================================
+FAIL: test_list_int (__main__.Test04_ModifyContact)
+*** Test04 *** GIVEN: filename t99.dat = {'7145551111': ['Steve', 'Jobs'], '5625553333': ['Bill', 'Gates']} AND contacts = Contacts(filename='t99.dat') *** FUNCTION CALL: r = contacts.modify_contact(id = '7145559999', first_name = 'Richard', last_name = 'Stallman') *** EXPECT: r = 'error' ***
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/bebopkenny/cpsc233p/hw7/test.py", line 67, in test_list_int
+    self.assertEqual(r, 'error')
+AssertionError: 'Invalid phone number.' != 'error'
+- Invalid phone number.
++ error
+
+
+======================================================================
+FAIL: test_list_int (__main__.Test06_DeleteContact)
+*** Test06 *** GIVEN: filename t99.dat = {'7145551111': ['Steve', 'Jobs'], '5625553333': ['Bill', 'Gates']} AND contacts = Contacts(filename='t99.dat') *** FUNCTION CALL: r = contacts.delete_contact(id = '7145551111') *** EXPECT: r = 'error' ***
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/bebopkenny/cpsc233p/hw7/test.py", line 96, in test_list_int
+    self.assertEqual(r, 'error')
+AssertionError: 'Invalid phone number.' != 'error'
+- Invalid phone number.
++ error
+
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.012s
+
+FAILED (failures=3)
