@@ -1,0 +1,15 @@
+....E
+======================================================================
+ERROR: test_list_int (__main__.Test05_GET_CONTACT_PHONE_LIST.test_list_int)
+*** Test05 *** FUNCTION CALL: add_contact('Buzz','Lightyear') THEN add_phone(1,'Cell','(714)555-1212') THEN add_phone(1,'Home','(562)666-8855') THEN tmp = get_contact_phone_list() *** EXPECT: tmp = [(1, 'Buzz', 'Lightyear', 1, 1, 'Cell', '(714)555-1212'),(1, 'Buzz', 'Lightyear', 2, 1, 'Home', '(562)666-8855')] ***
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/csuftitan/Documents/CPSC-233P/hw11/test.py", line 107, in test_list_int
+    tmp = c.get_contact_phone_list()
+          ^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'Contacts' object has no attribute 'get_contact_phone_list'
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.037s
+
+FAILED (errors=1)
